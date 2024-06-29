@@ -1,1 +1,1 @@
-# Sample Applicatoin
+# Sample Application
