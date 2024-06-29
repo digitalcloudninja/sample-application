@@ -1,0 +1,89 @@
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      - "POSTGRES_DB=postgres"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=ChangeMeNow!"
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+    restart: always
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    hostname: swagger-ui
+    ports:
+      - '8081:8080'
+    environment:
+      - "BASE_URL=/swagger/"
+      - "SPEC={\"openapi\":\"3.1.0\"}"
+      - "URLS=[{url:\"http://localhost/v1/api/files/openapi\", name:\"Files Application API\"}]"
+  configuration:
+    image: digitalcloudninja/configuration-service:latest
+    hostname: configuration
+    environment:
+      - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
+      - "spring.cloud.config.server.git.uri=git@github.com:digital-cloud-ninja/sample-application-default-config.git"
+    volumes:
+      - "~/.ssh:/root/.ssh"
+    ports:
+      - "8888:8888"
+    healthcheck:
+      test: "wget --spider --quiet 'http://localhost:8888/configuration/health' || exit 1"
+      interval: 5s
+      retries: 3
+  discovery:
+    image: digitalcloudninja/discovery-service:latest
+    hostname: discovery
+    environment:
+      - "spring.cloud.config.uri=http://configuration:8888"
+      - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
+      - "eureka.instance.hostname=discovery"
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: "wget --spider --quiet 'http://localhost:8761/eureka/apps/CONFIGURATION' || exit 1"
+      start_period: 20s
+      interval: 10s
+      retries: 5
+    depends_on:
+      configuration:
+        condition: service_healthy
+  gateway:
+    image: digitalcloudninja/gateway-service:latest
+    hostname: gateway
+    environment:
+      - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
+      - 'eureka.hostname=discovery'
+      - 'swagger.hostname=swagger-ui'
+      - 'files.hostname=files'
+    ports:
+      - "80:80"
+    healthcheck:
+      test: "wget --spider --quiet 'http://localhost/actuator/health' || exit 1"
+      interval: 5s
+      retries: 3
+    depends_on:
+      discovery:
+        condition: service_healthy
+  files:
+    image: files:1.0.0
+    hostname: files
+    environment:
+      - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
+    ports:
+      - "8082:8082"
+    healthcheck:
+      test: "wget --spider --quiet 'http://localhost:8082/files/actuator/health' || exit 1"
+      interval: 5s
+      retries: 3
+    depends_on:
+      discovery:
+        condition: service_healthy
+volumes:
+  postgres_data:
+    driver: local
+networks:
+  local:
+    driver: bridge
