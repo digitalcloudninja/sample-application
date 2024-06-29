@@ -40,6 +40,8 @@ spring:
           uri: http://${files.hostname:localhost}:8082
           predicates:
             - Path=/v1/api/files/**
+  main:
+    web-application-type: reactive
 management:
   endpoint:
     gateway:
