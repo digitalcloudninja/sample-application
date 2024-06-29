@@ -68,12 +68,12 @@ services:
       discovery:
         condition: service_healthy
   files:
-    image: files:1.0.0
+    image: digitalcloudninja/filemanager-service:latest
     hostname: files
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
     ports:
-      - "8082:8082"
+      - "8082:8080"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost:8082/files/actuator/health' || exit 1"
       interval: 5s
