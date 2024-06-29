@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:alpine
+    hostname: postgres
     environment:
       - "POSTGRES_DB=postgres"
       - "POSTGRES_USER=postgres"
@@ -61,7 +62,7 @@ services:
     ports:
       - "80:80"
     healthcheck:
-      test: "wget --spider --quiet 'http://localhost/actuator/health' || exit 1"
+      test: "wget --spider --quiet 'http://localhost:8761/eureka/apps/GATEWAY-SERVICE' || exit 1"
       interval: 5s
       retries: 3
     depends_on:
@@ -72,10 +73,14 @@ services:
     hostname: files
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
+      - 'spring.datasource.url=jdbc:postgresql://postgres:5432/postgres'
+      - 'spring.datasource.username=postgres'
+      - 'spring.datasource.password=ChangeMeNow!'
+      - 'DATABASE_HOST=postgres'
     ports:
-      - "8082:8080"
+      - "8080:8080"
     healthcheck:
-      test: "wget --spider --quiet 'http://localhost:8082/files/actuator/health' || exit 1"
+      test: "wget --spider --quiet 'http://localhost:8761/eureka/apps/FILEMANAGER-SERVICE' || exit 1"
       interval: 5s
       retries: 3
     depends_on:
