@@ -1,0 +1,57 @@
+server:
+  port: 80
+  compression:
+    enabled: true
+  forward-headers-strategy: framework
+  error:
+    path: /404.html
+    include-exception: false
+    include-message: always
+    include-stacktrace: never
+    whitelabel:
+      enabled: false
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: discovery-route
+          uri: http://${eureka.hostname:localhost}:8761
+          predicates:
+            - Path=/discovery/**
+        - id: eureka-route
+          uri: http://${eureka.hostname:localhost}:8761
+          predicates:
+            - Path=/eureka/**
+        - id: eureka-lastn-route
+          uri: http://${eureka.hostname:localhost}:8761
+          predicates:
+            - Path=/lastn/**
+        - id: swagger-ui-route
+          uri: http://${swagger.hostname:localhost}:8080
+          predicates:
+            - Path=/swagger/**
+        - id: files-api-route
+          uri: http://${files.hostname:localhost}:8082
+          predicates:
+            - Path=/v1/api/files/**
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'info'
+          - 'health'
+          - 'gateway'
