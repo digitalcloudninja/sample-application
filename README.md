@@ -39,6 +39,19 @@
   </ol>
 </details>
 
+![GitHub top language](https://img.shields.io/github/languages/top/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+
+![GitHub Release Date](https://img.shields.io/github/release-date/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/digitalcloudninja/sample-application-configuration/total.svg?style=for-the-badge)
+
+![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+
+
+
+
 [![Forks][forks-shield]][forks-url]<br/>
 [![Stargazers][stars-shield]][stars-url]<br/>
 [![Issues][issues-shield]][issues-url]<br/>
