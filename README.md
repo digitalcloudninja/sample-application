@@ -21,18 +21,19 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+<br/>
+[![Docker][Docker-icon]][Docker-url]
 
 ## About The Application
 
 Here's a blank template to get started: To avoid retyping too much info.
 
+_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-[![Docker][Docker-icon]][Docker-url]
 
 Clone this Git repository, following these steps:
 
@@ -97,9 +98,6 @@ Use this space to show useful examples of how a project can be used. Additional 
    ```sh
   docker compose down
    ```
-
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
