@@ -69,26 +69,20 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* docker
   ```sh
-  npm install npm@latest -g
+  docker compose up -d
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/digitialcloudninja/repo_name.git
    ```
-3. Install NPM packages
+2. Build packages
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   gradle build
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,12 +101,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge
-[forks-url]: https://github.com/digitalcloudninja/sample-application-configuration/network/members
-[stars-shield]: https://img.shields.io/github/stars/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge
-[stars-url]: https://github.com/digitalcloudninja/sample-application-configuration/stargazers
-[issues-shield]: https://img.shields.io/github/issues/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge
-[issues-url]: https://github.com/digitalcloudninja/sample-application-configuration/issues
 [Gradle-icon]: https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white
 [Gradle-url]: https://docs.gradle.org/current/userguide/userguide.html
 [Docker-icon]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
