@@ -22,20 +22,17 @@
 ![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## About The Application
 
 Here's a blank template to get started: To avoid retyping too much info.
 
-### Prerequisites
-
-[![Docker][Docker-icon]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+[![Docker][Docker-icon]][Docker-url]
 
 Clone this Git repository, following these steps:
 
@@ -85,7 +82,13 @@ The basic instructions for installing Docker Desktop:
 
 You are now ready to manage this application's containers on your local machine.
 
-### Manage the Application
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
 
    ```sh
   docker compose up -d
@@ -95,16 +98,6 @@ You are now ready to manage this application's containers on your local machine.
   docker compose down
    ```
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
