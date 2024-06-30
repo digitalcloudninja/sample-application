@@ -49,12 +49,8 @@
 
 ![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 
+![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 
-
-
-[![Forks][forks-shield]][forks-url]<br/>
-[![Stargazers][stars-shield]][stars-url]<br/>
-[![Issues][issues-shield]][issues-url]<br/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
