@@ -18,9 +18,9 @@
    </p>
 </div>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
-![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
