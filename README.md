@@ -28,13 +28,32 @@
 
 Here's a blank template to get started: To avoid retyping too much info.
 
-### Runs With
+### Prerequisites
+
 [![Docker][Docker-icon]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+Clone this Git repository, following these steps:
+
+1.  **Navigate to the Directory where you want to Clone the Repository**:
+
+    *   Open a terminal or command prompt and move to the directory where you want to store the cloned repository.
+
+2. **Clone the Repository**:
+
+    *   In the terminal, use the `git clone` command followed by the repository URL. For example, to clone a repository with HTTPS:
+
+            git clone https://github.com/digitalcloudninja/sample-application-configuration.git
+
+    *   If you want to use SSH for cloning, use the SSH URL instead:
+
+            git clone git@github.com:digitalcloudninja/sample-application-configuration.git
+
+    * Press Enter to execute the command.
 
 
 ### Installation
