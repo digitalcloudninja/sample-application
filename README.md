@@ -12,9 +12,6 @@
 
   <p align="center">
     project_description
-    <br />
-    <br />
-    <a href="https://github.com/digitalcloudninja/filemanager-service"><strong>Explore the Documentation »</strong></a>
    </p>
 </div>
 
