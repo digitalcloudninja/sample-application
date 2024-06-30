@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/digitalcloudninja/sample-application-configuration">
+  <a href="https://github.com/digitalcloudninja/filemanager-service">
     <img src="https://avatars.githubusercontent.com/u/174159620?v=4" alt="Logo" width="160" height="160">
   </a>
 
@@ -14,48 +14,21 @@
     project_description
     <br />
     <br />
-    <a href="https://github.com/digitalcloudninja/sample-application-configuration"><strong>Explore the Documentation »</strong></a>
+    <a href="https://github.com/digitalcloudninja/filemanager-service"><strong>Explore the Documentation »</strong></a>
    </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-  </ol>
-</details>
-
-![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
+![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/filemanager-service.svg?style=for-the-badge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Application
 
-Here's a blank template to get started: To avoid retyping too much info. 
+Here's a blank template to get started: To avoid retyping too much info.
 
-### Built With
-[![Gradle 8.8][Gradle-icon]][Gradle-url]
-[![Java JDK 22][Java-icon]][Java-url]
-[![Spring][Spring-icon]][Spring-url]
-[![SpringBoot][SpringBoot-icon]][SpringBoot-url]
-[![SpringSecurity][SpringSecurity-icon]][SpringSecurity-url]
+### Runs With
 [![Docker][Docker-icon]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -63,26 +36,46 @@ Here's a blank template to get started: To avoid retyping too much info.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* docker
-  ```sh
-  docker compose up -d
-  ```
 
 ### Installation
 
-1. Clone the repo
+The basic instructions for installing Docker Desktop:
+
+1.  **Download Docker Desktop**:
+
+    *   Visit the official Docker website at <https://www.docker.com/products/docker-desktop>.
+    *   Click on the "Download for Mac" or "Download for Windows" button, based on your operating system.
+
+2.  **Install Docker Desktop on Windows**:
+
+    *   Once the installer is downloaded, double-click on the installer file (`Docker Desktop Installer.exe`) to begin the installation process.
+    *   Follow the on-screen instructions. You may need to approve the installation using administrative privileges.
+
+3.  **Install Docker Desktop on Mac**:
+
+    *   Once the installer is downloaded, open the downloaded file (`Docker.dmg`).
+    *   Drag the Docker Desktop application to the Applications folder to begin the installation.
+
+4.  **Run Docker Desktop**:
+
+    *   After the installation is complete, launch Docker Desktop from the Applications folder on Mac or the Start menu on Windows.
+
+5. **Verification**:
+
+    *   To verify that Docker is installed and running correctly, open a terminal or command prompt and run the command `docker --version`. This should display the installed version of Docker.
+
+You are now ready to manage this application's containers on your local machine.
+
+### Manage the Application
+
    ```sh
-   git clone https://github.com/digitialcloudninja/repo_name.git
+  docker compose up -d
    ```
-2. Build packages
+
    ```sh
-   gradle build
+  docker compose down
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,18 +91,3 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Gradle-icon]: https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white
-[Gradle-url]: https://docs.gradle.org/current/userguide/userguide.html
-[Docker-icon]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://docs.gradle.org/current/userguide/userguide.html
-[Java-icon]: https://img.shields.io/badge/java-F80000?style=for-the-badge&logo=oracle&logoColor=white
-[Java-url]: https://docs.gradle.org/current/userguide/userguide.html
-[Spring-icon]: https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
-[Spring-url]: https://spring.io/
-[SpringBoot-icon]: https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white
-[SpringBoot-url]: https://spring.io/
-[SpringSecurity-icon]: https://img.shields.io/badge/springsecurity-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white
-[SpringSecurity-url]: https://spring.io/
