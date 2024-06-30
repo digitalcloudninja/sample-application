@@ -1,6 +1,16 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Docker-icon]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://docs.gradle.org/current/userguide/userguide.html
+
+![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+[![Docker][Docker-icon]][Docker-url]
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -8,24 +18,17 @@
     <img src="https://avatars.githubusercontent.com/u/174159620?v=4" alt="Logo" width="160" height="160">
   </a>
 
-<h3 align="center">Sample Application</h3>
-
+<h1 align="center">Sample Application</h1>
   <p align="center">
     project_description
    </p>
 </div>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-<br/>
-[![Docker][Docker-icon]][Docker-url]
-
 ## About The Application
 
 Here's a blank template to get started: To avoid retyping too much info.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more information, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,10 +100,3 @@ Use this space to show useful examples of how a project can be used. Additional 
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Docker-icon]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://docs.gradle.org/current/userguide/userguide.html
-
