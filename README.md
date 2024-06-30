@@ -40,9 +40,8 @@
 </details>
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-
+![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,12 +51,12 @@
 Here's a blank template to get started: To avoid retyping too much info. 
 
 ### Built With
-[![Gradle 8.8][Gradle-icon]][Gradle-url]<br/>
-[![Java JDK 22][Java-icon]][Java-url]<br/>
-[![Spring][Spring-icon]][Spring-url]<br/>
-[![SpringBoot][SpringBoot-icon]][SpringBoot-url]<br/>
-[![SpringSecurity][SpringSecurity-icon]][SpringSecurity-url]<br/>
-[![Docker][Docker-icon]][Docker-url]<br/>
+[![Gradle 8.8][Gradle-icon]][Gradle-url]
+[![Java JDK 22][Java-icon]][Java-url]
+[![Spring][Spring-icon]][Spring-url]
+[![SpringBoot][SpringBoot-icon]][SpringBoot-url]
+[![SpringSecurity][SpringSecurity-icon]][SpringSecurity-url]
+[![Docker][Docker-icon]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
