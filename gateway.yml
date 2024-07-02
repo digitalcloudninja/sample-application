@@ -53,6 +53,6 @@ spring:
           predicates:
             - Path=/swagger/**
         - id: files-api-route
-          uri: http://${files.hostname:localhost}:8082
+          uri: http://${files.hostname:localhost}:8080
           predicates:
             - Path=/v1/api/filemanager/**
