@@ -64,7 +64,7 @@ services:
       - "80:80"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost/health' || exit 1"
-      start_period: 5s
+      start_period: 10s
       interval: 5s
       retries: 3
     depends_on:
@@ -80,7 +80,7 @@ services:
       - "8082:8080"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost/v1/api/filemanager/health' || exit 1"
-      start_period: 5s
+      start_period: 10s
       interval: 5s
       retries: 3
     depends_on:
