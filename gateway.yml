@@ -1,3 +1,19 @@
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include:
+          - 'info'
+          - 'health'
+          - 'gateway'
 server:
   port: 80
   compression:
@@ -12,7 +28,7 @@ server:
       enabled: false
 spring:
   application:
-    name: gateway-service
+    name: gateway
   cloud:
     gateway:
       discovery:
@@ -37,23 +53,6 @@ spring:
           predicates:
             - Path=/swagger/**
         - id: files-api-route
-          uri: http://${files.hostname:localhost}:8080
+          uri: http://${files.hostname:localhost}:8082
           predicates:
-            - Path=/v1/api/files/**
-  main:
-    web-application-type: reactive
-management:
-  endpoint:
-    gateway:
-      enabled: true
-    health:
-      enabled: true
-    info:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include:
-          - 'info'
-          - 'health'
-          - 'gateway'
+            - Path=/v1/api/filemanager/**

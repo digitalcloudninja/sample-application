@@ -3,13 +3,13 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Docker-icon]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://docs.gradle.org/current/userguide/userguide.html
+[Docker]: https://img.shields.io/badge/compose-2496ED?style=for-the-badge&logo=docker&logoColor=white
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-[![Docker][Docker-icon]][Docker-url]
+
+[![Docker][Docker]](https://docs.gradle.org/current/userguide/userguide.html)
 
 <!-- PROJECT LOGO -->
 <br />

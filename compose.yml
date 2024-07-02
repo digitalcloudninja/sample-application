@@ -21,7 +21,7 @@ services:
       - "SPEC={\"openapi\":\"3.1.0\"}"
       - "URLS=[{url:\"http://localhost/v1/api/files/openapi\", name:\"Files Application API\"}]"
   configuration:
-    image: digitalcloudninja/configuration-service:latest
+    image: digitalcloudninja/configuration:latest
     hostname: configuration
     environment:
       - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
@@ -35,7 +35,7 @@ services:
       interval: 5s
       retries: 3
   discovery:
-    image: digitalcloudninja/discovery-service:latest
+    image: digitalcloudninja/discovery:latest
     hostname: discovery
     environment:
       - "spring.cloud.config.uri=http://configuration:8888"
@@ -52,7 +52,7 @@ services:
       configuration:
         condition: service_healthy
   gateway:
-    image: digitalcloudninja/gateway-service:latest
+    image: digitalcloudninja/gateway:latest
     hostname: gateway
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
@@ -69,7 +69,7 @@ services:
       discovery:
         condition: service_healthy
   files:
-    image: digitalcloudninja/filemanager-service:latest
+    image: digitalcloudninja/filemanager:latest
     hostname: files
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
