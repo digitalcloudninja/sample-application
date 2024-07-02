@@ -32,6 +32,7 @@ services:
       - "8888:8888"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost:8888/configuration/health' || exit 1"
+      start_period: 5s
       interval: 5s
       retries: 3
   discovery:
@@ -63,6 +64,7 @@ services:
       - "80:80"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost/health' || exit 1"
+      start_period: 5s
       interval: 5s
       retries: 3
     depends_on:
@@ -78,10 +80,11 @@ services:
       - "8080:8080"
     healthcheck:
       test: "wget --spider --quiet 'http://localhost/v1/api/filemanager/health' || exit 1"
+      start_period: 5s
       interval: 5s
       retries: 3
     depends_on:
-      discovery:
+      gateway:
         condition: service_healthy
 volumes:
   postgres_data:
