@@ -79,7 +79,7 @@ services:
     ports:
       - "8082:8082"
     healthcheck:
-      test: "wget --spider --quiet 'http://localhost/v1/api/filemanager/health' || exit 1"
+      test: "wget --spider --quiet 'http://localhost:8082/v1/api/filemanager/health' || exit 1"
       start_period: 10s
       interval: 5s
       retries: 3
