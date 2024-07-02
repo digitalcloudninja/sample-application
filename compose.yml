@@ -19,7 +19,7 @@ services:
     environment:
       - "BASE_URL=/swagger/"
       - "SPEC={\"openapi\":\"3.1.0\"}"
-      - "URLS=[{url:\"http://localhost/v1/api/filemanager/openapi\", name:\"FileManager Service API\"}]"
+      - "URLS=[{url:\"http://localhost/v1/api/filemanager/api-docs\", name:\"FileManager Service API\"}]"
   configuration:
     image: digitalcloudninja/configuration:latest
     hostname: configuration
@@ -77,7 +77,7 @@ services:
     ports:
       - "8080:8080"
     healthcheck:
-      test: "wget --spider --quiet 'http://localhost/filemanager/health' || exit 1"
+      test: "wget --spider --quiet 'http://localhost/v1/api/filemanager/health' || exit 1"
       interval: 5s
       retries: 3
     depends_on:
