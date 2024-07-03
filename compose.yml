@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:alpine
+    image: digitalcloudninja/configuration
     hostname: postgres
     environment:
       - "POSTGRES_DB=postgres"
@@ -21,11 +21,11 @@ services:
       - "SPEC={\"openapi\":\"3.1.0\"}"
       - "URLS=[{url:\"http://localhost/v1/api/filemanager/api-docs\", name:\"FileManager Service API\"}]"
   configuration:
-    image: digitalcloudninja/configuration:latest
+    image: digitalcloudninja/configuration
     hostname: configuration
     environment:
       - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
-      - "spring.cloud.config.server.git.uri=git@github.com:digitalcloudninja/application-default-config.git"
+      - "spring.cloud.config.server.git.uri=git@github.com:digitalcloudninja/sample-application.git"
     volumes:
       - "~/.ssh:/root/.ssh"
     ports:
@@ -36,7 +36,7 @@ services:
       interval: 5s
       retries: 3
   discovery:
-    image: digitalcloudninja/discovery:latest
+    image: digitalcloudninja/discovery
     hostname: discovery
     environment:
       - "spring.cloud.config.uri=http://configuration:8888"
@@ -53,7 +53,7 @@ services:
       configuration:
         condition: service_healthy
   gateway:
-    image: digitalcloudninja/gateway:latest
+    image: digitalcloudninja/gateway
     hostname: gateway
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
@@ -63,7 +63,7 @@ services:
     ports:
       - "80:80"
     healthcheck:
-      test: "wget --spider --quiet 'http://localhost/health' || exit 1"
+      test: "wget --spider --quiet 'http://localhost:80/health' || exit 1"
       start_period: 10s
       interval: 5s
       retries: 3
@@ -71,7 +71,7 @@ services:
       discovery:
         condition: service_healthy
   files:
-    image: digitalcloudninja/filemanager:latest
+    image: digitalcloudninja/filemanager
     hostname: files
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
