@@ -11,8 +11,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sambasafetysolutions/sample-application">
-    <img src="https://avatars.githubusercontent.com/u/174151806?s=400&v=4" alt="Logo" width="160" height="160">
+  <a href="https://github.com/digitalcloudninja/sample-application">
+    <img src="https://avatars.githubusercontent.com/u/174159620?v=4" alt="Logo" width="320" height="320">
   </a>
 
 <h1 align="center">Sample Application</h1>
@@ -31,11 +31,11 @@ is to setup a microservices environment in Docker Desktop for testing purposes.
 This application uses the following predefined containers.
 
 - [swaggerapi/swagger-ui](https://hub.docker.com/r/swaggerapi/swagger-ui) 
-- [sambasafetysolutions/postgresql](https://hub.docker.com/repository/docker/sambasafetysolutions/postgresql/general) 
-- [sambasafetysolutions/configuration](https://hub.docker.com/repository/docker/sambasafetysolutions/configuration/general) 
-- [sambasafetysolutions/discovery](https://hub.docker.com/repository/docker/sambasafetysolutions/discovery/general) 
-- [sambasafetysolutions/gateway](https://hub.docker.com/repository/docker/sambasafetysolutions/gateway/general) 
-- [sambasafetysolutions/filemanager](https://hub.docker.com/repository/docker/sambasafetysolutions/filemanager/general) 
+- [digitalcloudninja/postgresql](https://hub.docker.com/repository/docker/digitalcloudninja/postgresql/general) 
+- [digitalcloudninja/configuration](https://hub.docker.com/repository/docker/digitalcloudninja/configuration/general) 
+- [digitalcloudninja/discovery](https://hub.docker.com/repository/docker/digitalcloudninja/discovery/general) 
+- [digitalcloudninja/gateway](https://hub.docker.com/repository/docker/digitalcloudninja/gateway/general) 
+- [digitalcloudninja/filemanager](https://hub.docker.com/repository/docker/digitalcloudninja/filemanager/general) 
 
 
 
@@ -55,11 +55,11 @@ Clone this Git repository, following these steps:
 
     *   In the terminal, use the `git clone` command followed by the repository URL. For example, to clone a repository with HTTPS:
 
-            git clone https://github.com/sambasafetysolutions/sample-application.git
+            git clone https://github.com/digitalcloudninja/sample-application.git
 
     *   If you want to use SSH for cloning, use the SSH URL instead:
 
-            git clone git@github.com:sambasafetysolutions/sample-application.git
+            git clone git@github.com:digitalcloudninja/sample-application.git
 
     * Press Enter to execute the command.
 
@@ -107,7 +107,7 @@ Use this space to show useful examples of how a project can be used. Additional 
   docker compose down
    ```
 
-![Docker Desktop](.images/docker-desktop.png)
+![Docker Desktop](./images/docker-desktop.png)
 
 ## Usage
 
