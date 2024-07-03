@@ -1,6 +1,7 @@
 services:
   postgres:
-    image: digitalcloudninja/configuration
+    image: digitalcloudninja/postgresql
+    platform: linux/arm64
     hostname: postgres
     environment:
       - "POSTGRES_DB=postgres"
@@ -13,6 +14,7 @@ services:
     restart: always
   swagger-ui:
     image: swaggerapi/swagger-ui
+    platform: linux/arm64
     hostname: swagger-ui
     ports:
       - '8081:8080'
@@ -22,6 +24,7 @@ services:
       - "URLS=[{url:\"http://localhost/v1/api/filemanager/api-docs\", name:\"FileManager Service API\"}]"
   configuration:
     image: digitalcloudninja/configuration
+    platform: linux/arm64
     hostname: configuration
     environment:
       - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
@@ -37,6 +40,7 @@ services:
       retries: 3
   discovery:
     image: digitalcloudninja/discovery
+    platform: linux/arm64
     hostname: discovery
     environment:
       - "spring.cloud.config.uri=http://configuration:8888"
@@ -54,6 +58,7 @@ services:
         condition: service_healthy
   gateway:
     image: digitalcloudninja/gateway
+    platform: linux/arm64
     hostname: gateway
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
@@ -72,6 +77,7 @@ services:
         condition: service_healthy
   files:
     image: digitalcloudninja/filemanager
+    platform: linux/arm64
     hostname: files
     environment:
       - 'eureka.client.service-url.defaultZone=http://discovery:8761/eureka/'
