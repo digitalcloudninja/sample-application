@@ -28,7 +28,7 @@ services:
     hostname: configuration
     environment:
       - "eureka.client.service-url.defaultZone=http://discovery:8761/eureka/"
-      - "spring.cloud.config.server.git.uri=git@github.com:digitalcloudninja/sample-application.git"
+      - "spring.cloud.config.server.git.uri=git@github.com:digitalcloudninja/sample-application-config.git"
     volumes:
       - "~/.ssh:/root/.ssh"
     ports:

@@ -1,34 +1,44 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Docker]: https://img.shields.io/badge/compose-2496ED?style=for-the-badge&logo=docker&logoColor=white
 
-![GitHub last commit](https://img.shields.io/github/last-commit/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub Tag](https://img.shields.io/github/v/tag/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/digitalcloudninja/sample-application-configuration.svg?style=for-the-badge)
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Docker]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[Compose]: https://img.shields.io/badge/compose-2496ED?style=for-the-badge&logo=docker&logoColor=white
 
 [![Docker][Docker]](https://docs.gradle.org/current/userguide/userguide.html)
+[![Docker Compose][Compose]](https://docs.gradle.org/current/userguide/userguide.html)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/digitalcloudninja/filemanager-service">
-    <img src="https://avatars.githubusercontent.com/u/174159620?v=4" alt="Logo" width="160" height="160">
+  <a href="https://github.com/sambasafetysolutions/sample-application">
+    <img src="https://avatars.githubusercontent.com/u/174151806?s=400&v=4" alt="Logo" width="160" height="160">
   </a>
 
 <h1 align="center">Sample Application</h1>
   <p align="center">
-    project_description
+    This is proof-of-concept application that has been pre-configured to run with Docker Desktop.
    </p>
 </div>
 
 ## About The Application
 
-Here's a blank template to get started: To avoid retyping too much info.
+This proof-of-concept application will help demonstrate a cloud application, buy using Docker Compose. It primary purpose
+is to setup a microservices environment in Docker Desktop for testing purposes. 
 
-_For more information, please refer to the [Documentation](https://example.com)_
+### Image Dependencies
+
+This application uses the following predefined containers.
+
+- [swaggerapi/swagger-ui](https://hub.docker.com/r/swaggerapi/swagger-ui) 
+- [sambasafetysolutions/postgresql](https://hub.docker.com/repository/docker/sambasafetysolutions/postgresql/general) 
+- [sambasafetysolutions/configuration](https://hub.docker.com/repository/docker/sambasafetysolutions/configuration/general) 
+- [sambasafetysolutions/discovery](https://hub.docker.com/repository/docker/sambasafetysolutions/discovery/general) 
+- [sambasafetysolutions/gateway](https://hub.docker.com/repository/docker/sambasafetysolutions/gateway/general) 
+- [sambasafetysolutions/filemanager](https://hub.docker.com/repository/docker/sambasafetysolutions/filemanager/general) 
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -45,11 +55,11 @@ Clone this Git repository, following these steps:
 
     *   In the terminal, use the `git clone` command followed by the repository URL. For example, to clone a repository with HTTPS:
 
-            git clone https://github.com/digitalcloudninja/sample-application-configuration.git
+            git clone https://github.com/sambasafetysolutions/sample-application.git
 
     *   If you want to use SSH for cloning, use the SSH URL instead:
 
-            git clone git@github.com:digitalcloudninja/sample-application-configuration.git
+            git clone git@github.com:sambasafetysolutions/sample-application.git
 
     * Press Enter to execute the command.
 
@@ -85,11 +95,9 @@ You are now ready to manage this application's containers on your local machine.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## Docker Compose
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
 
    ```sh
   docker compose up -d
@@ -99,4 +107,21 @@ Use this space to show useful examples of how a project can be used. Additional 
   docker compose down
    ```
 
+![Docker Desktop](.images/docker-desktop.png)
+
+## Usage
+
+_For more information, please refer to the [Documentation](https://localhost/docs)_
+
+### [Discovery Dashboard](http://localhost/discovery/dashboard)
+
+### [Swagger](http://localhost/swagger/index.html)
+
+### Default Configuration
+
+- [Discovery Service](http://localhost:8888/discovery/default/master)
+- [Gateway Service](http://localhost:8888/gateway/default/master)
+- [FileManager Service](http://localhost:8888/filemanager/default/master)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
