@@ -125,3 +125,4 @@ _For more information, please refer to the [Documentation](https://localhost/doc
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://digitalcloud-ninja-team.postman.co/collection/30874099-954f4536-cf1a-4b51-b861-fceb8e4bcc9c?source=rip_markdown&active-environment=30874099-fbbc709d-9f00-4d7a-a1cb-94273fb68d8c)
