@@ -86,7 +86,6 @@ services:
       - 'DATABASE_USERNAME=postgres'
       - 'DATABASE_PASSWORD=ChangeMeNow!'
       - 'DISCOVERY_ENABLED=true'
-      - 'DOCKER_ENABLED=true'
     ports:
       - "8082:8082"
     healthcheck:
